@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.6.5'
+}
+
+group 'org.example'
+version '2021.1.19.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    implementation 'com.google.guava:guava:30.1-jre'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2020.3'
+}
+patchPluginXml {
+    changeNotes """
+      <h2>V 1.0.0</h2>
+      <ul>
+        <li>First Version</li>
+        <li>Just For Self Use And Study</li>
+        <li>Wish Better Solution</li>
+        <li>Only Notify Once In 10S With Guava Cache</li>
+        <li>Must Have More Than Two Class Reload</li>
+      </ul>
+       """
+}
+test {
+    useJUnitPlatform()
+}

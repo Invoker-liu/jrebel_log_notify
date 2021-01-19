@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>org.invoker.jrebel_log_notify</id>
+    <name>JRebel Reload Notify</name>
+    <vendor email="liu4875487@163.com" url="https://juejin.cn/user/2594503171249992">LiuInvoker</vendor>
+
+    <description><![CDATA[
+    JRebel Reload Notify By Notifications<br/>
+    After JRebel Reload Class Or Bean<br/>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <consoleFilterProvider implementation="com.invoker.jrebel.notify.provider.NotifyConsoleFilterProvider" order="last" />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
